@@ -1,0 +1,238 @@
+/* Base styling */
+.presentation {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+
+.presentation .slide {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 80%;
+  max-width: 100vh;
+  max-height: 100vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.presentation .slide.active {
+  visibility: visible;
+}
+
+.presentation .margin-left, .margin-right {
+  flex: 1;
+  flex-direction: column;
+  /* background-color: var(--margin-color, #f0f0f0); */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.presentation .content {
+  display: flex;
+  flex-direction: column;
+  flex: 8;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.presentation .header {
+  flex: 1;
+}
+
+.presentation img {
+  max-width: 100%;
+}
+
+.presentation .centered-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.presentation .centered-header h1 {
+  margin-top: 20px;
+  font-size: 4em;
+  color: var(--title-color, #333);
+}
+
+.presentation .centered-header h2 {
+  margin: 0;
+  font-size: 2.5em;
+  color: var(--subtitle-color, #666);
+}
+
+.presentation .header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: var(--title-color, #333);
+}
+
+.presentation .header h2 {
+  margin: 0;
+  font-size: 1.2em;
+  color: var(--subtitle-color, #666);
+}
+
+.presentation .main-content {
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: var(--main-content-color, #000);
+}
+
+.presentation .footer {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  color: var(--footer-color, #999);
+}
+
+.presentation .footer-left, .footer-center, .footer-right {
+  flex: 1;
+  text-align: center;
+}
+
+.presentation .footer-left {
+  text-align: left;
+}
+
+.presentation .footer-right {
+  text-align: right;
+}
+
+/* Additional styling for content elements */
+.presentation p, ul, ol, pre {
+  margin: 10px 0;
+}
+
+.presentation ul, ol {
+  padding-left: 20px;
+  align-self: flex-start;
+}
+
+.caption {
+  font-size: 0.9em;
+  color: var(--caption-color, #777);
+  text-align: center;
+}
+
+.presentation a {
+  color: var(--link-color, #0066cc);
+  text-decoration: none;
+}
+
+.presentation a:hover {
+  text-decoration: underline;
+}
+
+.presentation pre {
+  background-color: var(--cb-file-container-color);
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.presentation strong {
+  font-weight: bold;
+}
+
+.presentation > em {
+  font-style: italic;
+}
+
+.presentation u {
+  text-decoration: underline;
+}
+
+.cb-example-code {
+  margin: 10px;
+  width: 100%;
+  background-color: var(--cb-file-container-color);
+  position: relative;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .presentation .slide {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-color: var(--slide-background-color, #fff);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  .cb-example-code {
+    margin: 10px;
+    width: 100%;
+    background-color: var(--cb-file-container-color);
+    position: relative;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .presentation .header h1 {
+    font-size: 2.5em;
+  }
+
+  .presentation .header h2 {
+    font-size: 1.5em;
+  }
+
+  .presentation .centered-header h1 {
+    font-size: 2.5em;
+  }
+
+  .presentation .centered-header h2 {
+    font-size: 1.5em;
+  }
+
+  .presentation .content {
+    padding: 10px;
+  }
+
+  .presentation .title {
+    font-size: 1.5em;
+  }
+
+  .presentation .subtitle {
+    font-size: 1em;
+  }
+
+  .presentation .main-content {
+    font-size: 1em;
+  }
+
+  .presentation .footer {
+    font-size: 0.8em;
+  }
+}
