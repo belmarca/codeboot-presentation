@@ -296,7 +296,7 @@ def setup_examples_vm():
 
     examples_vm = host_eval("(x) => new CodeBootVM(x)")(opts)
 
-init()
+# init()
 
 """
 TODO:
